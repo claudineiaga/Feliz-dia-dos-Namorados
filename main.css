@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff758f;
+  }
+  .valentines-day-card {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: #ff8fa3;
+    overflow: hidden;
+    border:10px solid white;
+    border-radius:10px;
+    box-shadow: 0 0 100px rgba(0,0,0,.4);
+  }
+  .valentines-day-card:before {
+    content:"";
+    position: absolute;
+    background-color: #ffb3c1;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    top:140px;
+    left:-25px;
+    box-shadow:60px 20px #ffb3c1,130px 10px #ffb3c1, 190px 20px #ffb3c1,260px -5px #ffb3c1, 340px 20px #ffb3c1;
+  }
+  .valentines-day-card:after {
+    content:"";
+    position: absolute;
+    background-color: #ffccd5;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    top:160px;
+    left:-40px;
+    box-shadow: 50px 20px #ffccd5,120px 40px #ffccd5, 200px 15px #ffccd5,260px 30px #ffccd5, 330px 30px #ffccd5,380px 10px #ffccd5;
+  }
+  .nuvens {
+    position: absolute;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background-color: #fff0f3;
+    z-index:5;
+    top:210px;
+    left:-20px;
+    box-shadow: 55px 30px #fff0f3, 125px 10px #fff0f3,175px 20px #fff0f3, 250px 10px #fff0f3, 320px 5px #fff0f3, 380px 10px #fff0f3;
+  }
+  .coracoes {
+    position: absolute;
+    z-index:2;
+  }
+  .coracaoUm {
+    position: absolute;
+    left:100px;
+    top:250px;
+    animation: up 4s linear forwards 1s;
+  }
+  .coracaoDois {
+    position: absolute;
+    left:270px;
+    top:230px;
+    animation: up 5s linear forwards 1.8s;
+  }
+  
+  .coracaoTres {
+    position: absolute;
+    left:85px;
+    top:415px;
+    animation: up 5s linear forwards 3s;
+  }
+  
+  .coracaoQuatro {
+    position: absolute;
+    left:320px;
+    top:380px;
+    animation: upTwo 9s linear infinite 3.5s;
+  }
+  
+.coracaoCinco {
+    position: absolute;
+    left:150px;
+    top:400px;
+    animation: upTwo 13s linear infinite 4.5s;
+  }
+  .lado-direito:before, .lado-direito:after {
+    position: absolute;
+    content:"";
+    transform-origin: left;
+    animation: move 1s ease infinite;
+  }
+  
+  .lado-direito:before {
+    border-radius:50% 50% 50% 0;
+    width:21px;
+    height:20px;
+    background-color: #c9184a;
+    left:-0.26px;
+  }
+  .lado-direito:after {
+    height:0;
+    width:0;
+    border-bottom:10px solid transparent;
+    border-left: 15px solid #c9184a;
+    top:19px;
+    left:-0.26px;
+  }
+  @keyframes move {
+    0%, 100% {transform: rotateY(0);}
+    50% {transform: rotateY(-45deg);}
+  }
+  
+  .lado-esquerdo:before, .lado-esquerdo:after {
+    position: absolute;
+    content:"";
+    transform-origin: right;
+    animation: move 1s ease infinite;
+  }
+  .lado-esquerdo:before {
+    border-radius:50% 50% 0 50%;
+    width:20px;
+    height:20px;
+    left:-20.7px;
+    background-color: #ff4d6d;
+  }
+  
+  .lado-esquerdo:after {
+    height:0;
+    width:0;
+    left:-15px;
+    border-bottom:10px solid transparent;
+    border-right: 15px solid #ff4d6d;
+    top:19px;
+  }
+  
+@keyframes up {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-200px);}
+  }
+  
+  @keyframes upTwo {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-450px);}
+  }
+  .text {
+    position: absolute;
+    color: #800f2f;
+    font-size:30px;
+    font-family: 'Pacifico', cursive;
+    line-height:1;
+    text-align: center;
+    width:380px;
+    left:10px;
+    z-index:3;
+    top:320px;
+    animation: up 1s ease forwards;
+    transition: .2s;
+  }
+  .hover {
+    color: white;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+  }
+  
+  .text:hover span {
+    display: none;
+  }
+  
+  .text:hover:before {
+    content:"Nem um milhão de linhas de código seriam capazes de registrar o amor que sinto por você. TE AMO";
+    font-size:25px;
+  
+  }
